@@ -20,10 +20,16 @@ Search Screen contains :
 * a navication bar which has a bar button item that navigate back to movies list
 * a text field that play the role of a search bar with a timer for 0.5 seconds to search
 * a table view that display filtered movies when typing in text field area
- 
+
+Pods Used :
+----------
+* Alamofire for networking
+* SDwebimage for images downloading with cache support 
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 Design Patterns:
 ----------------
 this app is made with MVC (Model View Controller) design pattern 
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 
