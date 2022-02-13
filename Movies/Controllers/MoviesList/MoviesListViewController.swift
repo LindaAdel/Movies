@@ -28,6 +28,12 @@ class MoviesListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     //MARK: IBActions
     
+    @IBAction func searchForAMovie(_ sender: UIBarButtonItem) {
+        if let moviesSearchVC = self.storyboard?.instantiateViewController(withIdentifier: "moviesSearch") as? MoviesSearchViewController {
+            moviesSearchVC.filteredMovies  = moviesResults
+            moviesSearchVC.modalPresentationStyle = .fullScreen
+            self.present(moviesSearchVC, animated: true, completion: nil)}
+    }
     
     //MARK: table view methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
