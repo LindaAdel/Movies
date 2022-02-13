@@ -8,6 +8,7 @@
 import UIKit
 import SDWebImage
 
+
 class MovieDetailViewController: UIViewController {
     
     var movie : MoviesResults?
@@ -18,6 +19,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieReleaseDate: UILabel!
     @IBOutlet weak var movieVote: UILabel!
     @IBOutlet weak var movieDescription: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +41,10 @@ class MovieDetailViewController: UIViewController {
             movieReleaseDate.text = movie?.release_date
             movieVote.text = String(vote)
             movieDescription.text = movie?.overview
+            
         }
         
     }
 
 }
+

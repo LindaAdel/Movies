@@ -218,7 +218,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-n6-eh7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                 <items>
-                                    <navigationItem prompt=" " id="yTx-Mz-3wy"/>
+                                    <navigationItem prompt=" " id="yTx-Mz-3wy">
+                                        <barButtonItem key="leftBarButtonItem" image="lessthan" catalog="system" id="V8L-aL-Pow">
+                                            <connections>
+                                                <action selector="backToMoviesList:" destination="nFt-M0-LVm" id="9M1-OE-aRq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-Bq-8Pu">

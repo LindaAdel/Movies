@@ -5,5 +5,6 @@ target 'Movies' do
 
   pod 'Alamofire'
   pod 'SDWebImage'
+  
 
 end

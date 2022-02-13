@@ -31,10 +31,15 @@ class MoviesSearchViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         searchList.isHidden = true
-        setUpSearchTextField()
+        setUpSearchIconForTextField()
       
     }
-    func setUpSearchTextField(){
+    //MARK: IBActions
+    
+    @IBAction func backToMoviesList(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    func setUpSearchIconForTextField(){
         searchTextField.leftViewMode = .always
         let searchIcon = UIImageView(image: UIImage(systemName: "magnifyingglass"))
         searchIcon.tintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
@@ -42,11 +47,7 @@ class MoviesSearchViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     //MARK: textfield search methods
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-         textField.resignFirstResponder()
-         return true
-     }
-     
+
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
         delayTimer?.invalidate()
          //input text
@@ -69,7 +70,7 @@ class MoviesSearchViewController: UIViewController, UITableViewDelegate, UITable
                 print("searchResult \(String(describing: searchResult))")
                 DispatchQueue.main.async {
                     self.searchList.isHidden = false
-                    
+                    self.searchList.reloadData()
                 }
             }
             
